@@ -1,0 +1,32 @@
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quem-sou {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 1rem 1rem;
+    background: #fff;
+    border: .1rem solid #8C72FF;
+    border-radius: 1.2rem;
+}
+
+.title {
+   text-align: center; 
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+.title h3 {
+    font-size: 1.6rem;
+    line-height: 1.4rem;
+}
+
+
+.title p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
