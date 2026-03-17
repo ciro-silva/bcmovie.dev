@@ -27,73 +27,62 @@
         <section id="home" class="page active">
 
             <button class="back" onclick="navigate('index.html')">←</button>
+
             <img id="img-bio" src="./assets/img/hero-img-port.png" class="top-img">
 
-           <div class="video-grid">
+            <div class="video-grid">
 
+                <div class="video-card"
+                    data-video="./assets/vid/video-1.mp4"
+                    data-desc="Serviço: Vídeo institucional. Execução: Roteiro, captação e edição.">
 
-           <div class="video-card"
-                data-video="./assets/vid/video-1.mp4"
-                data-desc="Serviço: Vídeo institucional. Execução: Roteiro, captação audiovisual e edição."
-            >
+                    <img src="./assets/img/thumb-1.png"/>
+                    <div class="play">▶</div>
+                </div>
 
-                <img src="./assets/img/thumb1.jpg">
+                <div class="video-card"
+                    data-video="./assets/vid/video-1.mp4"
+                    data-desc="Produção audiovisual corporativa.">
 
-                <div class="play">▶</div>
+                    <img src="./assets/img/thumb-1.png">
+                    <div class="play">▶</div>
+                </div>
+
+                <div class="video-card"
+                    data-video="./assets/vid/video-1.mp4"
+                    data-desc="Campanha para redes sociais.">
+
+                    <img src="./assets/img/thumb-1.png">
+                    <div class="play">▶</div>
+                </div>
+
+                <div class="video-card"
+                    data-video="./assets/vid/video-1.mp4"
+                    data-desc="Cobertura de evento.">
+
+                    <img src="./assets/img/thumb-1.png">
+                    <div class="play">▶</div>
+                </div>
+
             </div>
-
-
-
-<div class="video-card"
-data-video="./assets/vid/video-1.mp4"
-data-desc="Serviço: Vídeo institucional. Execução: Roteiro, captação audiovisual e edição."
->
-
-<img src="assets/images/thumb1.jpg">
-
-<div class="play">▶</div>
-
-</div>
-
-<div class="video-card"
-data-video="./assets/vid/video-1.mp4"
-data-desc="Produção audiovisual corporativa."
->
-
-<img src="assets/images/thumb2.jpg">
-
-<div class="play">▶</div>
-
-</div>
-
-<div class="video-card"
-data-video="assets/videos/video3.mp4"
-data-desc="Campanha para redes sociais."
->
-
-<img src="assets/images/thumb3.jpg">
-
-<div class="play">▶</div>
-
-</div>
-
-<div class="video-card"
-data-video="assets/videos/video4.mp4"
-data-desc="Cobertura de evento."
->
-
-<img src="assets/images/thumb4.jpg">
-
-<div class="play">▶</div>
-
-</div>
-
-</div>
 
             <a href="#" class="whatsapp">💬 Whatsapp</a>
 
         </section>
-    </div><!--app-->
+    </div>
+
+    <!--modal-->
+    <div id="videoModal">
+        <div class="modal-content">
+
+            <button class="close">X</button>
+
+            <video id="modalVideo" controls playsinline preload="metadata"></video>
+
+            <p id="videoDesc"></p>
+
+        </div>
+    </div>
 
 </body>
 

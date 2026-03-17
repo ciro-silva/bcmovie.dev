@@ -2,7 +2,6 @@ function navigate(page){
     window.location.href = page
 }
 
-
 const modal = document.getElementById("videoModal")
 const modalVideo = document.getElementById("modalVideo")
 const modalDesc = document.getElementById("videoDesc")
