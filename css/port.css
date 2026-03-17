@@ -1,0 +1,9 @@
+.continer-cards {
+    display: flex;
+    
+}
+
+.img-vid img {
+    width: 180px;
+    height: 180px;
+}
