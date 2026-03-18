@@ -2,41 +2,37 @@ function navigate(page){
     window.location.href = page
 }
 
-const modal = document.getElementById("videoModal")
-const modalVideo = document.getElementById("modalVideo")
-const modalDesc = document.getElementById("videoDesc")
-const closeBtn = document.querySelector(".close")
+document.addEventListener("DOMContentLoaded", () => {
 
-document.querySelectorAll(".video-card").forEach(card=>{
+    const modal = document.getElementById("videoModal")
+    const modalVideo = document.getElementById("modalVideo")
+    const modalDesc = document.getElementById("videoDesc")
+    const closeBtn = document.querySelector(".close")
 
-card.addEventListener("click",()=>{
+    if(!modal || !modalVideo || !modalDesc || !closeBtn) return
 
-modal.style.display="flex"
+    document.querySelectorAll(".video-card").forEach(card => {
 
-modalVideo.src = card.dataset.video
+        card.addEventListener("click", () => {
 
-modalDesc.innerText = card.dataset.desc
+            modal.style.display = "flex"
+            modalVideo.src = card.dataset.video
+            modalDesc.innerText = card.dataset.desc
+
+        })
+
+    })
+
+    closeBtn.onclick = () => {
+        modal.style.display = "none"
+        modalVideo.pause()
+    }
+
+    window.onclick = (e) => {
+        if(e.target === modal){
+            modal.style.display = "none"
+            modalVideo.pause()
+        }
+    }
 
 })
-
-})
-
-closeBtn.onclick=()=>{
-
-modal.style.display="none"
-
-modalVideo.pause()
-
-}
-
-window.onclick=(e)=>{
-
-if(e.target===modal){
-
-modal.style.display="none"
-
-modalVideo.pause()
-
-}
-
-}
